@@ -31,7 +31,6 @@ mongoose.connect(`mongodb+srv://${config.username}:${config.password}@${config.h
     console.error(`ERROR MONGODB: ${err}`);
 });
 
-
 app.listen(PORT, () => {
     console.log(`API RUNNING ON PORT ${PORT}`);
 });
