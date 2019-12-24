@@ -1,2 +1,2 @@
 # news-back
-Ejecutar node server.js
+Ejecutar node server.js :)
