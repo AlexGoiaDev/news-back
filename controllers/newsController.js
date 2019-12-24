@@ -10,7 +10,7 @@ router.route('/news/:id')
             res.status(400).send({
                 status: 400,
                 error
-            })
+            });
         }
     })
     .put(async (req, res) => {
@@ -20,7 +20,7 @@ router.route('/news/:id')
             res.status(400).send({
                 status: 400,
                 error
-            })
+            });
         }
     })
     .delete(async (req, res) => {
@@ -30,7 +30,7 @@ router.route('/news/:id')
             res.status(400).send({
                 status: 400,
                 error
-            })
+            });
         }
     });
 
@@ -44,7 +44,7 @@ router.route('/news')
             res.status(400).send({
                 status: 400,
                 error
-            })
+            });
         }
     })
     .post(async (req, res) => {
@@ -54,7 +54,7 @@ router.route('/news')
             res.status(400).send({
                 status: 400,
                 error
-            })
+            });
         }
     });
 
