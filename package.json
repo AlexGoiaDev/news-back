@@ -1,0 +1,15 @@
+{
+  "name": "back-news",
+  "version": "1.0.0",
+  "description": "Backend for news aplication",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backend",
+    "news"
+  ],
+  "author": "Álex Goia",
+  "license": "ISC"
+}
