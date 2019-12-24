@@ -14,7 +14,7 @@ const getNewsById = async (id) => {
 }
 
 const updateNewsById = async (id, changes) => {
-    return await News.findByIdAndUpdate({ _id, id }, changes, { new: true });
+    return await News.findByIdAndUpdate(id, changes, { new: true });
 }
 
 const deleteNewsById = async (id) => {
