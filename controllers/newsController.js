@@ -7,11 +7,18 @@ router.route('/news/:id')
     .get(async (req, res) => {
         try {
             const data = await newsService.getNewsById(req.params.id);
-            res.status(200).send({
-                status: 200,
-                message: 'News listed',
-                data
-            });
+            if(data) {
+                res.status(200).send({
+                    status: 200,
+                    message: 'News listed',
+                    data
+                });
+            } else {
+                res.status(204).send({
+                    status: 204,
+                    message: 'No content'
+                })
+            }
         } catch (error) {
             res.status(400).send({
                 status: 400,
