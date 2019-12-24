@@ -13,6 +13,7 @@
   "author": "Álex Goia",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "mongoose": "^5.8.3",
     "mongoose-paginate-v2": "^1.3.6"
   }
