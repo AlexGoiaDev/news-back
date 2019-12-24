@@ -9,7 +9,7 @@ router.route('/news/:id')
             const data = await newsService.getNewsById(req.params.id);
             res.status(200).send({
                 status: 200,
-                message: 'Success',
+                message: 'News listed',
                 data
             });
         } catch (error) {
@@ -24,7 +24,7 @@ router.route('/news/:id')
             const data = await newsService.updateNewsById(req.params.id, req.body);
             res.status(200).send({
                 status: 200,
-                message: 'Success',
+                message: 'News updated',
                 data
             });
         } catch (error) {
@@ -36,7 +36,12 @@ router.route('/news/:id')
     })
     .delete(async (req, res) => {
         try {
-
+            const data = await newsService.deleteNewsById(req.params.id);
+            res.status(200).send({
+                status: 200,
+                message: 'News deleted',
+                data
+            });
         } catch (error) {
             res.status(400).send({
                 status: 400,
@@ -48,8 +53,14 @@ router.route('/news/:id')
 router.route('/news')
     .get(async (req, res) => {
         const page = req.query.page || 0;
-        const limit = req.query.limit || 5;
+        const limit = req.query.limit || 10;
         try {
+            const data = await newsService.getNews(limit, page);
+            res.status(200).send({
+                status: 400,
+                message: 'News listed',
+                data
+            });
 
         } catch (error) {
             res.status(400).send({
@@ -60,7 +71,12 @@ router.route('/news')
     })
     .post(async (req, res) => {
         try {
-
+            const data = await newsService.addNews(req.body);
+            res.status(200).send({
+                status: 200,
+                message: 'News created',
+                data
+            });
         } catch (error) {
             res.status(400).send({
                 status: 400,
