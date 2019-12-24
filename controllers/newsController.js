@@ -57,7 +57,7 @@ router.route('/news')
         try {
             const data = await newsService.getNews(limit, page);
             res.status(200).send({
-                status: 400,
+                status: 200,
                 message: 'News listed',
                 data
             });
