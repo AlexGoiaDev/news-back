@@ -1,0 +1,7 @@
+{
+    "username": "news",
+    "password": "news1",
+    "host": "pruebas-81i89.mongodb.net",
+    "port": "27017",
+    "database": "testing"
+}
