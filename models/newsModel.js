@@ -13,8 +13,7 @@ const News = mongoose.Schema({
     },
     date: {
         type: Date,
-        required: true,
-        default: new Date()
+        required: true
     },
     description: {
         type: String,
